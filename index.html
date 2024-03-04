@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tarefas</title>
+     <!-- Definindo o caminho para o CSS: -->
+     <link a href="style.css" rel="stylesheet">
+     <!-- Definindo o caminho para o Javascript: -->
+     <script src="script.js" defer></script>
+     <!-- Importando o ícone que será usado como botão "remover": -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+<body>
+    <header class="header">
+        <h1>Lista de Tarefas</h1>
+    </header>
+    <main>
+        <div id="user-input">
+            <input type="text" id="insert-task" placeholder="Insira aqui a sua tarefa."/>
+            <button id="add-task" title="Adicionar tarefa">Adicionar</button>
+        </div>
+        <div id="task-list">
+        <!-- A tag div tem o id task-list para ser usada na customização pelo CSS. -->
+            <ul id="actual-list">
+            <!-- A tag ul tem o id actual-list para ser usada pelo javascript. -->
+                <li class="todo-item">
+                    <input type="checkbox" class="check-task"/>
+                    <span class="todo-item-text">Estudar HTML e CSS.</span>
+                    <button class="delete-button" title="Apagar tarefa"><i class='bx bxs-x-square'></i></button>
+                </li>
+
+                <li class="todo-item">
+                    <input type="checkbox" class="check-task"/>
+                    <span class="todo-item-text">Estudar JavaScript.</span>
+                    <button class="delete-button" title="Apagar tarefa"><i class='bx bxs-x-square'></i></button>
+                </li>
+
+                <li class="todo-item">
+                    <input type="checkbox" class="check-task"/>
+                    <span class="todo-item-text">Fazer exercícios.</span>
+                    <button class="delete-button" title="Apagar tarefa"><i class='bx bxs-x-square'></i></button>
+                </li>
+
+                <li class="todo-item">
+                    <input type="checkbox" class="check-task"/>
+                    <span class="todo-item-text">Limpar a caixa de areia do gato.</span>
+                    <button class="delete-button" title="Apagar tarefa"><i class='bx bxs-x-square'></i></button>
+                </li>
+            </ul>
+        </div>
+        <div id="task-amount-area">
+            <p>Total de tarefas:</p>
+                <div id="task-amount-circle">
+                    <span id="task-amount">4</span>
+                </div>
+        </div>
+    </main>
+
+</body>
+</html>
