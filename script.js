@@ -68,14 +68,25 @@ function renderList(){
 
     let idCheckbox = document.getElementById(id);
     idCheckbox.checked = task.done;
-  })
+    idCheckbox.addEventListener("change", function(){
+      setTaskDone(task.name);
+    });
+  });
+};
+
+// Função para marcar uma tarefa como concluída:
+function setTaskDone(taskName){
+  let taskListStorage = getTaskList();
+  taskListStorage.map(task => {
+    if(task.name == taskName){
+      task.done = !task.done;
+    };
+  });
+  localStorage.setItem("tasks", JSON.stringify(taskListStorage));
 };
 
 // Função para remover uma tarefa do LocalStorage:
 // EXERCICIO 03
-
-// Função para marcar uma tarefa como concluída:
-// EXERCICIO 02
 
 // Função que mostra a quantidade de tarefas:
 function updateTaskAmount() {
