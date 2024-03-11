@@ -50,8 +50,8 @@ function renderList() {
   taskList.innerHTML = "";
 
   taskListStorage.map((task, index) => {
-    let idCheck = 'tarefa-' + index;
-    let idButton = 'remover-tarefa-' + index;
+    let idCheck = 'task-' + index;
+    let idButton = 'remove-task-' + index;
 
     let checkbox = document.createElement("input");
     checkbox.classList.add("check-task");
@@ -73,7 +73,7 @@ function renderList() {
 
     // Apagar a tarefa, usando a janela de confirmação da library SweetAlert:
     // (Para documentação desta biblioteca: https://sweetalert2.github.io/ )
-    
+
     let deleteButton = document.getElementById(idButton);
     deleteButton.addEventListener("click", function() {
       Swal.fire({
