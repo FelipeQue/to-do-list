@@ -198,3 +198,9 @@ button {
     font-size: 14px;
     opacity: 0.5;
 }
+
+/* Ajuste no design da janela de confirmação via SweetAlert: */
+.swal2-popup {
+    font-size: 0.7rem !important;
+    font-family: "Farfetch Basis","Helvetica Neue",Arial,sans-serif !important;
+}
