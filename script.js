@@ -4,9 +4,8 @@ let taskList = document.getElementById("actual-list");
 let insertTask = document.getElementById("insert-task");
 let taskAmount;
 
-// O clique do botão adicionar:
+// O clique do botão para adicionar nova tarefa:
 addTaskButton.addEventListener('click', function () {
-  // Verificar se existe algo escrito (aproveitando que Javascript é truthy):
   if (insertTask.value) {
     createTask(insertTask.value);
     updateTaskAmount();
@@ -46,7 +45,7 @@ function createTask(taskName) {
 
 // Função para "renderizar" as tarefas na página:
 function renderList() {
-  let taskListStorage = getTaskList()
+  let taskListStorage = getTaskList();
   taskList.innerHTML = "";
 
   taskListStorage.map((task, index) => {
